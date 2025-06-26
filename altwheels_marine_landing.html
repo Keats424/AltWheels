@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AltWheels Marine - Sustainable Marine Innovation 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3f7 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0 20 Q25 0 50 10 T100 5 V20Z" fill="rgba(255,255,255,0.1)"/></svg>') repeat-x;
+            background-size: 200px 40px;
+            animation: wave 4s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-50px); }
+        }
+
+ flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #4a90e2;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .main-title {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .event-details {
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Why Sustainable Marine Section */
+        .why-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2c5aa0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3em;
+            color: #5cb3cc;
+            margin-bottom: 50px;
+        }
+
+        .tide-visual {
+            height: 8px;
+            background: linear-gradient(90deg, #5cb3cc 0%, #4a90e2 50%, #5cb3cc 100%);
+            border-radius: 4px;
+            margin: 30px auto 50px;
+            width: 60%;
+            animation: tide 3s ease-in-out infinite;
+        }
+
+        @keyframes tide {
+            0%, 100% { transform: scaleX(1); }
+            50% { transform: scaleX(1.1); }
+        }
+
+        .drivers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .driver-card {
+            background: linear-gradient(135deg, #f8fdff 0%, #e8f4f8 100%);
+            border-radius: 15px;
+            padding: 30px;
+            border-left: 5px solid #5cb3cc;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .driver-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .driver-number {
+            width: 40px;
+            height: 40px;
+            background: #5cb3cc;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .driver-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+
+        /* About AltWheels Section */
+        .about-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3f7 100%);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .about-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .about-card h3 {
+            color: #2c5aa0;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            background: #5cb3cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Focus Areas */
+        .focus-section {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .categories-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .category-item {
+            background: linear-gradient(135deg, #4a90e2 0%, #5cb3cc 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .category-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .tech-container {
+            margin-top: 40px;
+        }
+
+        .tech-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tech-item {
+            background: #e8f4f8;
+            color: #2c5aa0;
+            padding: 15px 25px;
+            border-radius: 20px;
+            border: 2px solid #5cb3cc;
+            font-weight: 500;
+        }
+
+        /* Partnership Section */
+        .partnership-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2c5aa0 0%, #4a90e2 100%);
+            color: white;
+        }
+
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .partnership-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .partnership-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        /* Sponsors Section */
+        .sponsors-section {
+            padding: 60px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .sponsors-highlight {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3f7 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .sponsors-number {
+            font-size: 4em;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #5cb3cc 0%, #4a90e2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #2c5aa0;
+            padding: 18px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5em; }
+            .about-grid { grid-template-columns: 1fr; }
+            .categories-container { flex-direction: column; align-items: center; }
+            .partnership-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="header">
+        <div class="container">
+            <div class="logo-container">
+                <svg class="logo-svg" width="140" height="60" viewBox="0 0 140 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 12px auto;">
+                  <!-- Left Wheel -->
+                  <circle cx="32" cy="30" r="18" fill="#e6f3f7" stroke="#357abd" stroke-width="3"/>
+                  <circle cx="32" cy="30" r="10" fill="none" stroke="#4a90e2" stroke-width="2"/>
+                  <line x1="32" y1="12" x2="32" y2="48" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="14" y1="30" x2="50" y2="30" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="19" y1="17" x2="45" y2="43" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="19" y1="43" x2="45" y2="17" stroke="#4a90e2" stroke-width="1.5"/>
+                  <!-- Center Wheel -->
+                  <circle cx="70" cy="30" r="18" fill="#e6f3f7" stroke="#357abd" stroke-width="3"/>
+                  <circle cx="70" cy="30" r="10" fill="none" stroke="#4a90e2" stroke-width="2"/>
+                  <line x1="70" y1="12" x2="70" y2="48" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="52" y1="30" x2="88" y2="30" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="59" y1="19" x2="81" y2="41" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="59" y1="41" x2="81" y2="19" stroke="#4a90e2" stroke-width="1.5"/>
+                  <!-- Right Wheel -->
+                  <circle cx="108" cy="30" r="18" fill="#e6f3f7" stroke="#357abd" stroke-width="3"/>
+                  <circle cx="108" cy="30" r="10" fill="none" stroke="#4a90e2" stroke-width="2"/>
+                  <line x1="108" y1="12" x2="108" y2="48" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="90" y1="30" x2="126" y2="30" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="97" y1="19" x2="119" y2="41" stroke="#4a90e2" stroke-width="1.5"/>
+                  <line x1="97" y1="41" x2="119" y2="19" stroke="#4a90e2" stroke-width="1.5"/>
+        
+               
+                </svg>
+            </div>
+            <h1 class="main-title">AltWheels Marine</h1>
+            <p class="subtitle">Navigating the Future of Sustainable Marine Innovation</p>
+            <div class="event-details">
+                <strong>Monday, October 6, 2025</strong><br>
+                Four Points by Sheraton, Norwood, MA
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Sustainable Marine Section -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">Why Sustainable Marine?</h2>
+            <p class="section-subtitle">The tide is turning.</p>
+            <div class="tide-visual"></div>
+            
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px; color: #666;">
+                Governments, companies, and innovators are racing to transform marine transport into a driver of clean growth, and the momentum is accelerating.
+            </p>
+
+            <div class="drivers-grid">
+                <div class="driver-card">
+                    <div class="driver-number">1</div>
+                    <h3 class="driver-title">Global Pledges Back the Transition</h3>
+                    <p>At COP26, the UN announced a new climate finance goal of $300 billion annually by 2035, funding previous pledges to decarbonize sectors like shipping and port logistics.</p>
+                </div>
+                
+                <div class="driver-card">
+                    <div class="driver-number">2</div>
+                    <h3 class="driver-title">The U.S. Inflation Reduction Act is Driving Change</h3>
+                    <p>With over $3 billion allocated to the Clean Ports Program, plus investments in zero-emission port equipment, marine sanctuaries, and coastal habitat restoration.</p>
+                </div>
+                
+                <div class="driver-card">
+                    <div class="driver-number">3</div>
+                    <h3 class="driver-title">Demand for Clean Tech is Surging</h3>
+                    <p>Ports levy systems, commercial fleets, and shipbuilders are actively adopting electric propulsion, hydrogen, ammonia, and sustainable materials.</p>
+                </div>
+                
+                <div class="driver-card">
+                    <div class="driver-number">4</div>
+                    <h3 class="driver-title">Innovation is an Economic Opportunity</h3>
+                    <p>Maritime tech is the next workstream for renewable marine technologies are becoming commercially viable — offering leaders competitive advantage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About AltWheels Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">What is AltWheels?</h2>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3><span class="icon">🏆</span>21 Years of Excellence</h3>
+                    <p>AltWheels Fleet Day has won an EPA award for fostering clean fleet future transportation. For 21 years, we have connected fleet managers, government officials, and sustainability leaders.</p>
+                </div>
+                
+                <div class="about-card">
+                    <h3><span class="icon">🚢</span>Marine Innovation Focus</h3>
+                    <p>A unique opportunity for marine innovators to access decision-makers in the sustainable transport and gain visibility with decision-makers in the sustainable transport sector.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas Section -->
+    <section class="focus-section">
+        <div class="container">
+            <h2 class="section-title">Categories We are Featuring</h2>
+            
+            <div class="categories-container">
+                <div class="category-item">Ferry</div>
+                <div class="category-item">Workboat</div>
+                <div class="category-item">Pleasurecraft</div>
+                <div class="category-item">UUV</div>
+                <div class="category-item">NGO</div>
+            </div>
+
+            <div class="tech-container">
+                <h3 class="section-title" style="font-size: 2em;">Technologies in Focus</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">Electric Propulsion Systems</div>
+                    <div class="tech-item">Alternative fuels (Hydrogen, Ammonia, Biofuels, etc.)</div>
+                    <div class="tech-item">Hydrodynamic Effieciency (Foils and Hulls)</div>
+                    <div class="tech-item">Autonomous Marine Systems</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Opportunities Section -->
+    <section class="partnership-section">
+        <div class="container">
+            <h2 class="section-title" style="color:#5cb3cc;">Sponsorship Opportunities</h2>
+            
+            <div class="partnership-grid">
+                <div class="partnership-card">
+                    <div class="partnership-icon">🏢</div>
+                    <h3>Be an Exhibitor</h3>
+                    <p>Showcase your innovations directly to industry leaders</p>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-icon">🎤</div>
+                    <h3>Speak at the Conference</h3>
+                    <p>Share your expertise with sustainability professionals</p>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-icon">🤝</div>
+                    <h3>Lunch with Experts</h3>
+                    <p>Network in intimate settings with decision-makers</p>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-icon">💡</div>
+                    <h3>Benefit from the Spotlight</h3>
+                    <p>Gain visibility and recognition in the marine innovation space</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <div class="container">
+            <div class="sponsors-highlight">
+                <div class="sponsors-number">18+</div>
+                <h3 style="color: #2c5aa0; font-size: 1.5em; margin-bottom: 20px;">Sponsors & Collaborators at AltWheels 2025</h3>
+                <p style="color: #666;">Join leading organizations including Toyota, Ford Pro, EDF, CALSTART, MassDOT and counting.</p>
+                <p style="margin-top: 20px; font-style: italic; color: #5cb3cc;">This is the inaugural year of our marine expansion - be among the founding sponsors!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Join Marine</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">Be part of the first-ever AltWheels Marine and help shape the future of sustainable marine transportation.</p>
+            <a href="#" class="cta-button">Become a Sponsor | Contact: meg@classic-communications.com | 508.498.8020</a>
+        </div>
+    </section>
+</body>
+</html>
