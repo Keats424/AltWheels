@@ -442,6 +442,20 @@
         </div>
     </section>
 
+      <!-- SPONSOR GALLERY SECTION - APPEARS HERE -->
+    <section class="sponsors-gallery-section">
+        <div class="container">
+            <h2 class="section-title">Sponsors & Partners Gallery</h2>
+            <p class="section-subtitle">Supporting the future of sustainable marine innovation</p>
+            <div class="sponsor-logos" id="sponsorGallery">
+                <!-- Your 5 sponsor logos will appear here automatically -->
+            </div>
+            <p style="text-align: center; color: #666; margin-top: 20px; font-style: italic;">
+                Join these industry leaders in shaping marine transportation
+            </p>
+        </div>
+    </section>
+
     <!-- Focus Areas Section -->
     <section class="focus-section">
         <div class="container">
@@ -533,5 +547,46 @@
             <a href="#" class="cta-button">Become a Sponsor | Contact: meg@classic-communications.com | 508.498.8020</a>
         </div>
     </section>
+       <script>
+        function loadSponsorImages() {
+            const sponsorGallery = document.getElementById('sponsorGallery');
+            
+            // 🔧 REPLACE THESE WITH YOUR EXACT IMAGE FILENAMES 🔧
+            const sponsorImages = [
+                'ShredLogo.png',     // ← Replace with your actual filename
+                'Shredboat.jpg',     // ← Replace with your actual filename  
+                'ShredCube.jpg',     // ← Replace with your actual filename
+        
+            ];
+
+            sponsorImages.forEach(imageName => {
+                const sponsorDiv = document.createElement('div');
+                sponsorDiv.className = 'sponsor-logo';
+                
+                const img = document.createElement('img');
+                img.src = `images/sponsors/${imageName}`;
+                img.alt = imageName.replace(/[-_]/g, ' ').replace(/\.(png|jpg|jpeg|svg)$/i, '');
+                
+                // Hide broken images
+                img.onerror = function() {
+                    sponsorDiv.style.display = 'none';
+                };
+                
+                // Fade in successful images
+                img.onload = function() {
+                    sponsorDiv.style.opacity = '0';
+                    sponsorDiv.style.transition = 'opacity 0.5s ease-in-out';
+                    setTimeout(() => {
+                        sponsorDiv.style.opacity = '1';
+                    }, 100);
+                };
+                
+                sponsorDiv.appendChild(img);
+                sponsorGallery.appendChild(sponsorDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadSponsorImages);
+    </script>
 </body>
 </html>
