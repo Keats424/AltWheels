@@ -350,8 +350,8 @@
           display: block;
           width: 100%;
           height: auto;
-          max-width: 300px;   /* hard cap on width */
-          max-height: 200px;   /* hard cap on height */
+          max-width: 400px;   /* hard cap on width */
+          max-height: 300px;   /* hard cap on height */
           object-fit: contain;
           filter: grayscale(10%);
           transition: transform 0.2s ease, filter 0.2s ease;
@@ -608,8 +608,8 @@
                 const img = document.createElement('img');
                 img.src = `images/sponsors/${imageName}`;
                 img.alt = imageName.replace(/[-_]/g, ' ').replace(/\.(png|jpg|jpeg|svg)$/i, '');
-                img.width = 300;   // hard cap width
-                img.height = 200;   // hard cap height
+                img.width = 400;   // hard cap width
+                img.height = 300;   // hard cap height
                 // Hide broken images
                 img.onerror = function() {
                     sponsorDiv.style.display = 'none';
