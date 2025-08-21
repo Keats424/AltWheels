@@ -599,8 +599,8 @@
                 const img = document.createElement('img');
                 img.src = `images/sponsors/${imageName}`;
                 img.alt = imageName.replace(/[-_]/g, ' ').replace(/\.(png|jpg|jpeg|svg)$/i, '');
-                img.width = 200;   // hard cap width
-                img.height = 100;   // hard cap height
+                img.width = 300;   // hard cap width
+                img.height = 200;   // hard cap height
                 // Hide broken images
                 img.onerror = function() {
                     sponsorDiv.style.display = 'none';
